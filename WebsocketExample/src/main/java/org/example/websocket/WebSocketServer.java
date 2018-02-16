@@ -18,6 +18,7 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.example.model.Link;
 
+@WebServlet(name = "WebSocketServlet", urlPatterns = "/WebsocketExample")
 @ApplicationScoped
 @ServerEndpoint("/actions")
 public class WebSocketServer {
