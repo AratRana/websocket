@@ -21,6 +21,9 @@ LoadModule rewrite_module modules/mod_rewrite.so
 
 
 RewriteEngine On
+
 RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
+
 RewriteCond %{HTTP:CONNECTION} Upgrade$ [NC]
+
 RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]   
