@@ -18,7 +18,9 @@ for apache httpd server add the below in httpd.config otherwise the handshake wi
 enable the rewirte loader
 # httpd.conf
 LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
+
 LoadModule proxy_module modules/mod_proxy.so (for mod_proxy setup)
+
 LoadModule rewrite_module modules/mod_rewrite.so
 
 
