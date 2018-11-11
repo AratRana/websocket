@@ -16,10 +16,10 @@ open the url http://localhost:8080/WebsocketSample in two tab, then add link in 
 
 for apache httpd server add the below in httpd.config otherwise the handshake will not happen for webserver url
 enable the rewirte loader
-
+# httpd.conf
 LoadModule rewrite_module modules/mod_rewrite.so
 
-# websocket 
+
 RewriteEngine On
 RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
 RewriteCond %{HTTP:CONNECTION} Upgrade$ [NC]
